@@ -1,4 +1,5 @@
 ##工程结构
+
     common-api        [暴露接口]
     common-business   [提供Entity等业务模块]
     common-domain     [提供DTO等展示模块]
