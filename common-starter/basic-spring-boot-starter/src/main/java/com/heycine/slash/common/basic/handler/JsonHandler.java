@@ -27,14 +27,14 @@ public class JsonHandler {
 		objectMapper.setSerializationInclusion(JsonInclude.Include.ALWAYS);
 
 		// null替换为{}
-		objectMapper.getSerializerProvider().setNullValueSerializer(new JsonSerializer<Object>() {
+		/*objectMapper.getSerializerProvider().setNullValueSerializer(new JsonSerializer<Object>() {
 			@Override
 			public void serialize(Object s, JsonGenerator jsonGenerator, SerializerProvider serializerProvider)
 					throws IOException {
 				jsonGenerator.writeStartObject();
 				jsonGenerator.writeEndObject();
 			}
-		});
+		});*/
 
 		return objectMapper;
 	}

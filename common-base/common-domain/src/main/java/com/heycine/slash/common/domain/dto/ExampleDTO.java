@@ -6,8 +6,10 @@ import com.heycine.slash.common.basic.Group;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -19,8 +21,8 @@ import java.util.Date;
  */
 @Data
 @ApiModel("ExampleDTO")
-
-public class ExampleDTO {
+@NoArgsConstructor
+public class ExampleDTO implements Serializable {
 
 	@ApiModelProperty(value = "ID编号")
 	private String id;

@@ -23,10 +23,10 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class SmsProperties {
 
-	@Value("${ali.accesskey}")
+	@Value("${ali.accesskey:''}")
 	private String accesskey;
 
-	@Value("${ali.accesssecret}")
+	@Value("${ali.accesssecret:''}")
 	private String accesssecret;
 
 	@Bean

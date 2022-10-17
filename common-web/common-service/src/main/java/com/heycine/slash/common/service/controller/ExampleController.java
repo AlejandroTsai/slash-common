@@ -45,10 +45,10 @@ public class ExampleController {
 	 * @return
 	 */
 	@GetMapping("/detail")
-	public R<ExampleDTO> example(@RequestParam String id) {
+	public R<ExampleDTO> example(@RequestParam String id) throws InterruptedException {
 
 		ExampleDTO exampleDTO = exampleService.example(id);
-
+		Thread.sleep(3000);
 		return R.ok(exampleDTO);
 	}
 

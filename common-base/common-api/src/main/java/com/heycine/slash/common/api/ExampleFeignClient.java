@@ -1,6 +1,7 @@
 package com.heycine.slash.common.api;
 
 import com.heycine.slash.common.basic.http.R;
+import com.heycine.slash.common.domain.dto.ExampleDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  * @author zzj
  */
-@FeignClient(contextId = "ExampleFeignClient", value = "example-service")
+@FeignClient(contextId = "ExampleFeignClient", value = "common-service")
 public interface ExampleFeignClient {
 
 	/**
 	 * 获取用户信息
-	 * @param userId
+	 * @param id
 	 * @return
 	 */
-	@GetMapping({"/user/getUserInfo"})
-	R<Object> getUserInfo(@RequestParam("userId") String userId);
+	@GetMapping({"/example/detail"})
+	R<ExampleDTO> example(@RequestParam("id") String id);
 
 }
